@@ -1,3 +1,228 @@
+// let age = 14
+
+// let result = age >= 18 ? "Adult" : "Minor"
+
+// console.log(result)
+
+// // ---------------------
+
+// let age1 = 20
+
+// if(age >= 18){
+//   console.log("Adult")
+// }
+
+// // --------------------------
+
+// let age = 15
+
+// if(age >= 18){
+//   console.log("Adult")
+// }else{
+//   console.log("Minor")
+// }
+
+// // ----------------------------------
+
+// let marks = 75
+
+// if(marks >= 90){
+//   console.log("A")
+// }else if(marks >= 70){
+//   console.log("B")
+// }else{
+//   console.log("C")
+// }
+
+// // -----------------------------------------------
+
+// let day = 2
+
+// switch(day){
+//   case 1:
+//     console.log("Monday")
+//     break
+
+//   case 2:
+//     console.log("Tuesday")
+//     break
+
+//   default:
+//     console.log("Invalid")
+// }
+
+// // -------------------------------------------
+
+// for(let i = 1; i <= 5; i++){
+//   console.log(i)
+// }
+
+
+// // ---------------------------------------------
+
+// let i = 1
+
+// while(i <= 5){
+//   console.log(i)
+//   i++
+// }
+
+// // -------------------------------------------------------
+
+// let i = 1
+
+// do{
+//   console.log(i)
+//   i++
+// }while(i <= 5)
+
+//     // ----------------------------------------------------------------
+
+//     // continue and break
+
+//     for(let a =0; a<=10; a++)
+//     {
+      
+//       if (a==4){
+//         break;
+//       }
+//       console.log(a)
+//     }
+
+
+//     for(let a=0; a<=10; a++){
+
+//       if(a==4){
+//         continue;
+//       }
+//       console.log(a)
+//     }
+
+// // ---------------------------------------------------------------
+
+// // function----
+
+// function totalSum(English, Hindi, Marathi)
+// {
+//   let sum = English+Hindi+Marathi;
+//   return sum;
+
+// }
+// let prashiktotal =totalSum(50,80,100);
+// console.log("Prashik" + prashiktotal)
+
+// ---------------------------------------------
+
+// Number---------------------------
+
+ //let num = 112;
+
+// console.log(num.toPrecision(4))  //112.0
+//console.log(num.toPrecision(3))  //112
+//console.log(num.toFixed(3))  // 112.000
+//let num = 12.456
+
+//console.log(num.toFixed(2))
+
+// String----------------------
+
+// let str = "prashik";
+// console.log(str.length)
+// console.log(str.replace("sh", "T"))
+// console.log(str.split("s"))
+// console.log(str.toLowerCase)
+// console.log(str.toUpperCase)
+// console.log(str.charAt(5)) index start with 0
+
+// Math-----------------------------------------
+// let min =1;
+// let max =9;
+
+// let randomNumber = Math.floor(Math.random()*(max-min+1));
+// console.log(randomNumber);
+
+// Array--------------------------
+
+let arr = [2,78,58,8,9,85]
+for(let i=0; i<arr.length; i++)
+{
+  console.log(arr[i])
+}
+
+// Arrays of object-------------------------
+let users = [
+
+  {
+    name: "Prashik",
+    age: 23
+  },
+
+  {
+    name: "Rahul",
+    age: 25
+  },
+
+  {
+    name: "Amit",
+    age: 21
+  }
+
+]
+
+console.log(users[0].name)
+console.log(users[0])
+
+
+for(let i = 0; i < users.length; i++){
+
+  console.log(users[i].name)
+
+}
+
+
+// add new --------------------------
+users.push({
+  name: "Sahil",
+  age: 24
+})
+
+
+// for...of Loop------------------------------
+let fruits = ["Apple", "Banana", "Mango"]
+
+for(let fruit of fruits){
+  console.log(fruit)
+}
+
+let name = "Prashik"
+
+for(let char of name){
+  console.log(char)
+}
+
+
+// for...in Loop--------------------------------
+let user = {
+  name: "Prashik",
+  age: 23,
+  city: "Pune"
+}
+
+for(let key in user){
+  console.log(key)
+}
+
+for(let key in user){
+  console.log(user[key])
+}
+
+for(let key in user){
+  console.log(key, user[key])
+}
+
+
+
+
 // function sum(...num){
 //     let total = num[0]+num[1]+num[2]
 //     console.log(total)
