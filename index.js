@@ -143,82 +143,82 @@
 
 // Array--------------------------
 
-let arr = [2,78,58,8,9,85]
-for(let i=0; i<arr.length; i++)
-{
-  console.log(arr[i])
-}
+// let arr = [2,78,58,8,9,85]
+// for(let i=0; i<arr.length; i++)
+// {
+//   console.log(arr[i])
+// }
 
 // Arrays of object-------------------------
-let users = [
+// let users = [
 
-  {
-    name: "Prashik",
-    age: 23
-  },
+//   {
+//     name: "Prashik",
+//     age: 23
+//   },
 
-  {
-    name: "Rahul",
-    age: 25
-  },
+//   {
+//     name: "Rahul",
+//     age: 25
+//   },
 
-  {
-    name: "Amit",
-    age: 21
-  }
+//   {
+//     name: "Amit",
+//     age: 21
+//   }
 
-]
+// ]
 
-console.log(users[0].name)
-console.log(users[0])
-
-
-for(let i = 0; i < users.length; i++){
-
-  console.log(users[i].name)
-
-}
+// console.log(users[0].name)
+// console.log(users[0])
 
 
-// add new --------------------------
-users.push({
-  name: "Sahil",
-  age: 24
-})
+// for(let i = 0; i < users.length; i++){
+
+//   console.log(users[i].name)
+
+// }
 
 
-// for...of Loop------------------------------
-let fruits = ["Apple", "Banana", "Mango"]
-
-for(let fruit of fruits){
-  console.log(fruit)
-}
-
-let name = "Prashik"
-
-for(let char of name){
-  console.log(char)
-}
+// // add new --------------------------
+// users.push({
+//   name: "Sahil",
+//   age: 24
+// })
 
 
-// for...in Loop--------------------------------
-let user = {
-  name: "Prashik",
-  age: 23,
-  city: "Pune"
-}
+// // for...of Loop------------------------------
+// let fruits = ["Apple", "Banana", "Mango"]
 
-for(let key in user){
-  console.log(key)
-}
+// for(let fruit of fruits){
+//   console.log(fruit)
+// }
 
-for(let key in user){
-  console.log(user[key])
-}
+// let name = "Prashik"
 
-for(let key in user){
-  console.log(key, user[key])
-}
+// for(let char of name){
+//   console.log(char)
+// }
+
+
+// // for...in Loop--------------------------------
+// let user = {
+//   name: "Prashik",
+//   age: 23,
+//   city: "Pune"
+// }
+
+// for(let key in user){
+//   console.log(key)
+// }
+
+// for(let key in user){
+//   console.log(user[key])
+// }
+
+// for(let key in user){
+//   console.log(key, user[key])
+// }
 
 
 
@@ -388,3 +388,54 @@ for(let key in user){
 
 // let student = students.filter(std=> std.age>=20)   ---------in one line
 // console.log(student)
+// Scope Where a variable can be accessed in the code-----------------------------------
+
+// Global Scope -------------------------
+
+// Variable accessible everywhere.--------------------------------------------
+
+// let name = "Prashik"
+
+// function test(){
+//    console.log(name)
+// }
+
+// test()
+// console.log(name)
+
+// Function Scope ---------------------------------
+// Variables declared inside a function can only be used inside that function.-------------------------------
+
+// function demo(){
+//    let age = 22
+//    console.log(age)
+// }
+
+// demo()
+
+// console.log(age)
+
+// Block Scope----------------------------
+// let and const are block scoped.---------------------------------
+
+// {
+//    let city = "Pune"
+//    console.log(city)
+// }
+
+// console.log(city)
+
+// Lexical Scope-----------------------------------------------
+// Inner functions can access outer function variables.-------------------------------------------
+
+// function outer(){
+//    let name = "Prashik"
+
+//    function inner(){
+//       console.log(name)
+//    }
+
+//    inner()
+// }
+
+// outer()
