@@ -1,5 +1,6 @@
 // let age = 14
 
+// 
 // let result = age >= 18 ? "Adult" : "Minor"
 
 // console.log(result)
@@ -439,3 +440,32 @@
 // }
 
 // outer()
+
+// Auto global means:-------------------------
+// a variable becomes global automatically if declared without let, const, or var.------------
+
+// function test(){
+
+//   name = "Prashik"
+
+// }
+
+// test()
+
+// console.log(name)
+
+// Hoisting in JavaScript
+// Hoisting means:
+// JavaScript moves declarations to the top before code execution.
+
+// console.log(a)
+
+// var a = 10
+
+// function Hoisting
+
+// greet()
+
+// function greet(){
+//   console.log("Hello")
+// }
