@@ -9,7 +9,7 @@
 
 // let age1 = 20
 
-// if(age >= 18){
+// if(age1 >= 18){
 //   console.log("Adult")
 // }
 
@@ -81,23 +81,23 @@
 
 //     // continue and break
 
-//     for(let a =0; a<=10; a++)
-//     {
+    // for(let a =0; a<=10; a++)
+    // {
       
-//       if (a==4){
-//         break;
-//       }
-//       console.log(a)
-//     }
+    //   if (a==4){
+    //     break;
+    //   }
+    //   console.log(a)
+    // }
 
 
-//     for(let a=0; a<=10; a++){
+    // for(let a=0; a<=10; a++){
 
-//       if(a==4){
-//         continue;
-//       }
-//       console.log(a)
-//     }
+    //   if(a==4){
+    //     continue;
+    //   }
+    //   console.log(a)
+    // }
 
 // // ---------------------------------------------------------------
 
@@ -441,6 +441,7 @@
 
 // outer()
 
+
 // Auto global means:-------------------------
 // a variable becomes global automatically if declared without let, const, or var.------------
 
@@ -477,26 +478,26 @@
 // give me your no, i will call back later
 
 
-function outer(){
+// function outer(){
 
-  let count = 0
+//   let count = 0
 
-  function inner(){
+//   function inner(){
 
-    count++
+//     count++
 
-    console.log(count)
+//     console.log(count)
 
-  }
+//   }
 
-  return inner
-}
+//   return inner
+// }
 
-let result = outer()
+// let result = outer()
 
-result()
-result()
-result()
-result()
-result()
-result()
+// result()
+// result()
+// result()
+// result()
+// result()
+// result()
