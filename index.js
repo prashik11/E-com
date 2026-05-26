@@ -469,3 +469,34 @@
 // function greet(){
 //   console.log("Hello")
 // }
+
+// callback function
+// Pasing a function as an argument inside a other function.
+
+// eg: Pizza boy says
+// give me your no, i will call back later
+
+
+function outer(){
+
+  let count = 0
+
+  function inner(){
+
+    count++
+
+    console.log(count)
+
+  }
+
+  return inner
+}
+
+let result = outer()
+
+result()
+result()
+result()
+result()
+result()
+result()
