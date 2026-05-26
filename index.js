@@ -8,7 +8,7 @@
 
 // let age1 = 20
 
-// if(age >= 18){
+// if(age1 >= 18){
 //   console.log("Adult")
 // }
 
@@ -80,23 +80,23 @@
 
 //     // continue and break
 
-//     for(let a =0; a<=10; a++)
-//     {
+    // for(let a =0; a<=10; a++)
+    // {
       
-//       if (a==4){
-//         break;
-//       }
-//       console.log(a)
-//     }
+    //   if (a==4){
+    //     break;
+    //   }
+    //   console.log(a)
+    // }
 
 
-//     for(let a=0; a<=10; a++){
+    // for(let a=0; a<=10; a++){
 
-//       if(a==4){
-//         continue;
-//       }
-//       console.log(a)
-//     }
+    //   if(a==4){
+    //     continue;
+    //   }
+    //   console.log(a)
+    // }
 
 // // ---------------------------------------------------------------
 
