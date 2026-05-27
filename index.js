@@ -605,6 +605,11 @@ para.setAttribute("class", "para2")
 para.innerHTML= "World"
 console.log(para)
 
+document.append(newtag)
+const body = document.getelementtagname("body")
+body[0].append(newtag)
+
+
 append() is used to:
 add elements or text at the end of another element.
 
@@ -619,3 +624,4 @@ document.body.append(h1, p)
 let li = document.createElement("li")
 li.innerText = "Apple"
 document.querySelector("ul").append(li) */
+
