@@ -501,3 +501,121 @@
 // result()
 // result()
 // result()
+
+//Dom(document object model)
+/* <h1 id="title">Hello</h1>
+
+const heading = document.getElementById("title")
+heading.innerText = "Welcome"
+console.log(heading)
+
+//change text
+document.getElementById("demo").innerText = "Welcome"
+
+//change colour
+document.getElementById("demo").style.color = "red"
+
+Dom manipulation
+changing HTML/CSS/content of webpage using JavaScript.
+
+By ID
+document.getElementById("demo")
+
+By Class
+document.getElementsByClassName("box")
+
+By Tag
+document.getElementsByTagName("p")
+
+Query Selector
+document.querySelector(".box")
+
+Input Example
+<input id="name">
+let value = document.getElementById("name").value
+
+console.log(value) */
+
+// NodeList is:
+// a collection of DOM elements returned by some DOM methods.
+
+// <p>One</p>
+// <p>Two</p>
+// <p>Three</p>
+// let items = document.querySelectorAll("p")
+
+// console.log(items)
+
+// Access Elements
+// Like array indexing.
+// console.log(items[0])
+
+// HTMLCollection is:
+
+// a collection of HTML elements returned by some DOM methods.
+
+// It is:
+// array-like
+// but NOT a real array
+
+// Mostly returned by:
+// getElementsByClassName()
+// getElementsByTagName()
+
+
+// <div class="box">One</div>
+// <div class="box">Two</div>
+// <div class="box">Three</div>
+
+// let items = document.getElementsByClassName("box")
+// console.log(items)
+
+// Access Elements
+// Using index.
+
+// console.log(items[0])
+
+
+// innerText, textContent, and innerHTML in JavaScript
+
+// These are used to:
+// get
+// change
+// content inside HTML elements.
+
+// <div id="demo">
+//   Hello
+//   <span style="display:none">Hidden</span>
+// </div>
+
+// Example Comparison
+// <div id="box">
+//   Hello
+//   <span style="display:none">World</span>
+// </div>
+// Results
+// innerText   → Hello
+// textContent → Hello World
+// innerHTML   → Hello <span>World</span>
+
+//creating new tag
+/* <p>Hello</p>
+const para = document.createElement("p")
+para.setAttribute("class", "para2")
+para.innerHTML= "World"
+console.log(para)
+
+append() is used to:
+add elements or text at the end of another element.
+
+Append Multiple Elements
+let h1 = document.createElement("h1")
+h1.innerText = "Title"
+
+let p = document.createElement("p")
+p.innerText = "Paragraph"
+document.body.append(h1, p)
+
+let li = document.createElement("li")
+li.innerText = "Apple"
+document.querySelector("ul").append(li) */
