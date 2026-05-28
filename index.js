@@ -310,7 +310,6 @@
 
 // users.forEach((user)=>{
 //     console.log(user)
-
 // })
 
 // arrowFunction-----------------------------------
@@ -502,6 +501,26 @@
 // result()
 // result()
 
+// Closures
+// A closure is the combination of a function bundled together (enclosed) 
+// with references to its surrounding state (the lexical environment). In other words, a closure gives a function access
+// to its outer scope.
+
+// function outer(){
+
+//     let name = "Prashik"
+
+//     function inner(){
+//         console.log(name)
+//     }
+
+//     return inner
+// }
+
+// const result = outer()
+
+// result()
+
 //Dom(document object model)
 /* <h1 id="title">Hello</h1>
 
@@ -624,4 +643,3 @@ document.body.append(h1, p)
 let li = document.createElement("li")
 li.innerText = "Apple"
 document.querySelector("ul").append(li) */
-
