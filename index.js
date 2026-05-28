@@ -643,3 +643,16 @@ document.body.append(h1, p)
 let li = document.createElement("li")
 li.innerText = "Apple"
 document.querySelector("ul").append(li) */
+
+// let data = ["Mouse", "Keypad","Laptop", "Powerbank", "cable"]
+
+// for(let i = 0; i<=data.length; i++){
+//     const litag = document.createElement("li");
+//     litag.innerText = data[i];
+    //ul1.append(litag)
+
+//Eventlistner
+const btn1=document.getElementById("btn")
+btn.onclick()=>{
+    console.log("Hello event")
+}
