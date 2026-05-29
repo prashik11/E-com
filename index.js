@@ -646,13 +646,47 @@ document.querySelector("ul").append(li) */
 
 // let data = ["Mouse", "Keypad","Laptop", "Powerbank", "cable"]
 
-// for(let i = 0; i<=data.length; i++){
-//     const litag = document.createElement("li");
-//     litag.innerText = data[i];
-    //ul1.append(litag)
+// const ull = document.getElementById("ul1");
+
+// for(let i = 0; i < data.length; i++){
+//  const litag = document.createElement("li");
+//  litag.innerText = data[i];
+//   ull.append(litag);
+// }
 
 //Eventlistner
-const btn1=document.getElementById("btn")
-btn.onclick()=>{
-    console.log("Hello event")
-}
+// event means:
+// Something that happens in webpage
+
+// Examples:
+// button click
+// typing
+// mouse move
+// submit form
+
+// const btn1=document.getElementById("btn")
+// btn.onclick=()=>{
+//     console.log("Hello event")
+// }
+
+// const btn = document.getElementById("btn")
+// btn.addEventListener("click", () =>{
+//     alert("Button clicked")
+// })
+
+// Syntax:
+// element.addEventListener("event", function)
+
+// //Event Handler
+// function responds to an event
+
+// <button onclick="show()">Click Me</button>
+
+// <script>
+
+// function show(){
+//     alert("Button clicked")
+// }
+
+// </script>
+
