@@ -1,0 +1,10 @@
+#mainDiv{
+    background-color:green;
+}
+
+#childDiv{
+    margin: 30px;
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+}

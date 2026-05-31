@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1, .box2{
+    display: flex;
+    background-color: grey;
+    width: 800px;
+    height: 500px;
+    margin: 30px
+
+}
+
+.item{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    background-color: peru;
+}

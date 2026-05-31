@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propogation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Event Propagation in JavaScript
+Event propagation means:
+how an event travels through HTML elements when an event occurs.
+For example, if you click a button inside a div, the event can move between the button and its parent elements.
+
+Example
+<div id="parent">
+  <button id="child">Click Me</button>
+</div> -->
+
+<!-- Event Bubbling in JavaScript
+Event bubbling means:
+when an event happens on a child element, it automatically moves up to its parent elements.
+
+It travels:
+Child → Parent → Grandparent → Document
+Example
+<div id="parent">
+  <button id="child">Click Me</button>
+</div>
+document.getElementById("parent")
+  .addEventListener("click", () => {
+    console.log("Parent clicked");
+  });
+
+document.getElementById("child")
+  .addEventListener("click", () => {
+    console.log("Button clicked");
+  });
+
+Output
+
+Button clicked
+Parent clicked -->
+
+    <div id="mainDiv">
+        <div class="childDiv" id="div1">Child Div 1</div>
+        <div class="childDiv" id="div2">Child Div 2</div>
+        <div class="childDiv" id="div3">Child Div 3</div>
+        <div class="childDiv" id="div4">Child Div 4</div>
+    </div>
+
+<!-- //Event capturing is:
+the event travels from the parent element down to the target element.
+
+Direction:
+
+Document
+  ↓
+HTML
+  ↓
+BODY
+  ↓
+DIV (parent)
+  ↓
+BUTTON (target)
+Example
+<div id="parent">
+  <button id="child">Click Me</button>
+</div>
+document.getElementById("parent")
+  .addEventListener("click", () => {
+    console.log("Parent");
+  }, true);
+
+document.getElementById("child")
+  .addEventListener("click", () => {
+    console.log("Button");
+  }, true);
+Output
+Parent
+Button -->
+
+
+
+
+    <script src="index.js"></script>
+
+</body>
+</html>
