@@ -664,11 +664,13 @@ document.querySelector("ul").append(li) */
 // mouse move
 // submit form
 
+//old way
 // const btn1=document.getElementById("btn")
 // btn.onclick=()=>{
 //     console.log("Hello event")
 // }
 
+//new
 // const btn = document.getElementById("btn")
 // btn.addEventListener("click", () =>{
 //     alert("Button clicked")
@@ -689,4 +691,34 @@ document.querySelector("ul").append(li) */
 // }
 
 // </script>
+
+//Event object
+//an object automatically created when an event happens
+
+// const btn = document.getElementById("btn")
+const body = document.querySelector("body")
+// btn.addEventListener('click', (e) => {
+    // e.target.innerText = "Hello"
+    // console.log(e.target)
+    // console.log("Hello bhai")
+
+    // const ischange = confirm("change color")
+    // if(ischange){
+    //     const colorName = prompt("Which color")
+    //     console.log(colorName)
+    //     body.style.backgroundColor = '${colorName}'
+    // }
+    // console.log("hello from js file")
+// })
+
+//text
+    const submit = document.getElementById("submit");
+    const colorName = document.getElementById("colorName")
+
+    submit.addEventListener("click", (e) => {
+        e.preventDefault();
+        body.style.backgroundColor = '${colorName.value}'
+        console.log(colorName.value)
+    })
+
 
