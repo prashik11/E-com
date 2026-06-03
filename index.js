@@ -721,4 +721,54 @@ const body = document.querySelector("body")
         console.log(colorName.value)
     })
 
+// setInterval() is used to:
+// run a function repeatedly after a fixed time interval.
+// Syntax
+// setInterval(function, timeInMilliseconds)
+// Example
+// setInterval(() => {
+//   console.log("Hello");
+// }, 1000);
 
+// Store Interval ID
+// const intervalId = setInterval(() => {
+//   console.log("Running...");
+// }, 1000);
+
+// intervalId can be used to stop the interval.
+// Stop Interval
+// Use clearInterval()
+
+// const intervalId = setInterval(() => {
+//   console.log("Hello");
+// }, 1000);
+
+// clearInterval(intervalId);
+
+// setTimeout() is used to:
+// run a function once after a specified delay.
+
+// Syntax
+// setTimeout(function, timeInMilliseconds)
+
+// Example
+// setTimeout(() => {
+//   console.log("Hello");
+// }, 2000);
+
+// const timeoutId = setTimeout(() => {
+//   console.log("Hello");
+// }, 2000);
+// clearTimeout(timeoutId);
+
+// console.log("Start");
+
+// setTimeout(() => {
+//   console.log("Welcome");
+// }, 3000);
+
+// console.log("End");
+// Output
+// Start
+// End
+// Welcome

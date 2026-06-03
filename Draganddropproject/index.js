@@ -5,7 +5,7 @@ const items = document.querySelectorAll(".item")
 
 for (let item of items){
     item.addEventListener('dragstart', (e)=>{
-        let data = e.target         ---> use this to items empty.
+        let data = e.target        // ---> use this to items empty.
     //drag to drop
         box2.addEventListener('dragover', (e)=>{
             e.preventDefault();
