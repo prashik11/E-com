@@ -1,0 +1,316 @@
+<!-- <!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flipkart Style Ecommerce</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 overflow-x-hidden w-full">
+
+  <!-- Navbar
+  <nav class="bg-blue-600 text-white shadow-lg sticky top-0 z-50 w-full">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col lg:flex-row gap-4 lg:gap-0 items-center justify-between">
+      
+      <div class="flex flex-col sm:flex-row items-center gap-4 lg:gap-10 w-full lg:w-auto">
+        <h1 class="text-2xl font-bold cursor-pointer">ShopKart</h1>
+
+        <div class="flex items-center bg-white rounded overflow-hidden w-full sm:w-[400px] md:w-[500px]">
+          <input type="text" placeholder="Search for products, brands and more" class="w-full px-4 py-2 outline-none text-black" />
+          <button class="bg-yellow-400 px-5 py-2 text-black font-semibold hover:bg-yellow-500 cursor-pointer">
+            Search
+          </button>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 font-medium text-sm sm:text-base">
+        <a href="#" class="hover:text-yellow-300">Home</a>
+        <a href="#" class="hover:text-yellow-300">Products</a>
+        <a href="#" class="hover:text-yellow-300">Categories</a>
+        <a href="#" class="hover:text-yellow-300">Orders</a>
+        <button class="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-200 cursor-pointer">
+          Login
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Categories 
+  <section class="bg-white shadow-sm py-4">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-6 text-sm font-semibold">
+      <div class="hover:text-blue-600 cursor-pointer">Mobiles</div>
+      <div class="hover:text-blue-600 cursor-pointer">Fashion</div>
+      <div class="hover:text-blue-600 cursor-pointer">Electronics</div>
+      <div class="hover:text-blue-600 cursor-pointer">Home</div>
+      <div class="hover:text-blue-600 cursor-pointer">Appliances</div>
+      <div class="hover:text-blue-600 cursor-pointer">Travel</div>
+      <div class="hover:text-blue-600 cursor-pointer">Beauty</div>
+      <div class="hover:text-blue-600 cursor-pointer">Grocery</div>
+    </div>
+  </section>
+
+  <!-- Banner 
+  <section class="w-full max-w-7xl mx-auto mt-5 px-4">
+    <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl h-40 sm:h-52 md:h-64 flex items-center justify-center text-white text-2xl sm:text-3xl md:text-4xl font-bold shadow-lg text-center px-4">
+      Big Billion Day Sale 🔥
+    </div>
+  </section>
+
+  <!-- Filter Section 
+  <section class="w-full max-w-7xl mx-auto px-4 mt-8">
+    <div class="bg-white rounded-xl shadow p-4 flex flex-col lg:flex-row gap-4 justify-between items-center">
+
+      <div class="flex flex-wrap gap-3 items-center justify-center lg:justify-start w-full">
+        <select class="border px-4 py-2 rounded-lg outline-none cursor-pointer hover:border-blue-500">
+          <option>Category</option>
+          <option>Mobiles</option>
+          <option>Fashion</option>
+          <option>Electronics</option>
+          <option>Home</option>
+        </select>
+
+        <select class="border px-4 py-2 rounded-lg outline-none cursor-pointer hover:border-blue-500">
+          <option>Price</option>
+          <option>Below ₹1000</option>
+          <option>₹1000 - ₹5000</option>
+          <option>₹5000 - ₹10000</option>
+        </select>
+
+        <select class="border px-4 py-2 rounded-lg outline-none cursor-pointer hover:border-blue-500">
+          <option>Brand</option>
+          <option>Apple</option>
+          <option>Samsung</option>
+          <option>Sony</option>
+        </select>
+
+        <select class="border px-4 py-2 rounded-lg outline-none cursor-pointer hover:border-blue-500">
+          <option>Rating</option>
+          <option>4★ & above</option>
+          <option>3★ & above</option>
+        </select>
+      </div>
+
+      <div class="flex gap-3">
+        <button class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 cursor-pointer">
+          Apply Filters
+        </button>
+
+        <button class="bg-gray-200 px-5 py-2 rounded-lg hover:bg-gray-300 cursor-pointer">
+          Reset
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Products 
+  <section class="w-full max-w-7xl mx-auto px-4 py-8">
+    <div class="flex flex-col sm:flex-row gap-4 sm:gap-0 items-center justify-between mb-6">
+      <h2 class="text-3xl font-bold">Featured Products</h2>
+      <button class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 cursor-pointer">
+        View All
+      </button>
+    </div>
+
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 place-items-center">
+
+      <!-- 20 Product Cards 
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs">
+        <img src="https://picsum.photos/300?1" class="rounded-lg w-full h-40 sm:h-48 object-cover" />
+        <h3 class="font-bold text-lg mt-3">Wireless Headphones</h3>
+        <p class="text-gray-500 text-sm">Noise Cancellation</p>
+        <div class="flex items-center justify-between mt-3">
+          <span class="text-green-600 font-bold text-xl">₹1,999</span>
+          <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs">
+        <img src="https://picsum.photos/300?2" class="rounded-lg w-full h-40 sm:h-48 object-cover" />
+        <h3 class="font-bold text-lg mt-3">Smart Watch</h3>
+        <p class="text-gray-500 text-sm">Fitness Tracking</p>
+        <div class="flex items-center justify-between mt-3">
+          <span class="text-green-600 font-bold text-xl">₹2,499</span>
+          <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs">
+        <img src="https://picsum.photos/300?3" class="rounded-lg w-full h-40 sm:h-48 object-cover" />
+        <h3 class="font-bold text-lg mt-3">Gaming Mouse</h3>
+        <p class="text-gray-500 text-sm">RGB Lighting</p>
+        <div class="flex items-center justify-between mt-3">
+          <span class="text-green-600 font-bold text-xl">₹899</span>
+          <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs">
+        <img src="https://picsum.photos/300?4" class="rounded-lg w-full h-40 sm:h-48 object-cover" />
+        <h3 class="font-bold text-lg mt-3">Bluetooth Speaker</h3>
+        <p class="text-gray-500 text-sm">Deep Bass</p>
+        <div class="flex items-center justify-between mt-3">
+          <span class="text-green-600 font-bold text-xl">₹1,299</span>
+          <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs">
+        <img src="https://picsum.photos/300?5" class="rounded-lg w-full h-40 sm:h-48 object-cover" />
+        <h3 class="font-bold text-lg mt-3">DSLR Camera</h3>
+        <p class="text-gray-500 text-sm">4K Recording</p>
+        <div class="flex items-center justify-between mt-3">
+          <span class="text-green-600 font-bold text-xl">₹45,999</span>
+          <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button>
+        </div>
+      </div>
+
+      <!-- Repeated cards
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs">
+        <img src="https://picsum.photos/300?6" class="rounded-lg w-full h-40 sm:h-48 object-cover" />
+        <h3 class="font-bold text-lg mt-3">Laptop</h3>
+        <p class="text-gray-500 text-sm">16GB RAM</p>
+        <div class="flex items-center justify-between mt-3">
+          <span class="text-green-600 font-bold text-xl">₹59,999</span>
+          <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs">
+        <img src="https://picsum.photos/300?7" class="rounded-lg w-full h-40 sm:h-48 object-cover" />
+        <h3 class="font-bold text-lg mt-3">Shoes</h3>
+        <p class="text-gray-500 text-sm">Running Shoes</p>
+        <div class="flex items-center justify-between mt-3">
+          <span class="text-green-600 font-bold text-xl">₹1,499</span>
+          <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs">
+        <img src="https://picsum.photos/300?8" class="rounded-lg w-full h-40 sm:h-48 object-cover" />
+        <h3 class="font-bold text-lg mt-3">T-Shirt</h3>
+        <p class="text-gray-500 text-sm">Cotton Wear</p>
+        <div class="flex items-center justify-between mt-3">
+          <span class="text-green-600 font-bold text-xl">₹699</span>
+          <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs">
+        <img src="https://picsum.photos/300?9" class="rounded-lg w-full h-40 sm:h-48 object-cover" />
+        <h3 class="font-bold text-lg mt-3">Keyboard</h3>
+        <p class="text-gray-500 text-sm">Mechanical RGB</p>
+        <div class="flex items-center justify-between mt-3">
+          <span class="text-green-600 font-bold text-xl">₹2,199</span>
+          <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs">
+        <img src="https://picsum.photos/300?10" class="rounded-lg w-full h-40 sm:h-48 object-cover" />
+        <h3 class="font-bold text-lg mt-3">Monitor</h3>
+        <p class="text-gray-500 text-sm">144Hz Display</p>
+        <div class="flex items-center justify-between mt-3">
+          <span class="text-green-600 font-bold text-xl">₹12,999</span>
+          <button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button>
+        </div>
+      </div>
+
+      <!-- Extra 10 Cards 
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs"><img src="https://picsum.photos/300?11" class="rounded-lg w-full h-40 sm:h-48 object-cover" /><h3 class="font-bold text-lg mt-3">Tablet</h3><p class="text-gray-500 text-sm">Android Tablet</p><div class="flex items-center justify-between mt-3"><span class="text-green-600 font-bold text-xl">₹15,999</span><button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button></div></div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs"><img src="https://picsum.photos/300?12" class="rounded-lg w-full h-40 sm:h-48 object-cover" /><h3 class="font-bold text-lg mt-3">Backpack</h3><p class="text-gray-500 text-sm">Travel Bag</p><div class="flex items-center justify-between mt-3"><span class="text-green-600 font-bold text-xl">₹999</span><button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button></div></div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs"><img src="https://picsum.photos/300?13" class="rounded-lg w-full h-40 sm:h-48 object-cover" /><h3 class="font-bold text-lg mt-3">Phone</h3><p class="text-gray-500 text-sm">5G Smartphone</p><div class="flex items-center justify-between mt-3"><span class="text-green-600 font-bold text-xl">₹24,999</span><button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button></div></div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs"><img src="https://picsum.photos/300?14" class="rounded-lg w-full h-40 sm:h-48 object-cover" /><h3 class="font-bold text-lg mt-3">Jacket</h3><p class="text-gray-500 text-sm">Winter Collection</p><div class="flex items-center justify-between mt-3"><span class="text-green-600 font-bold text-xl">₹2,799</span><button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button></div></div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs"><img src="https://picsum.photos/300?15" class="rounded-lg w-full h-40 sm:h-48 object-cover" /><h3 class="font-bold text-lg mt-3">Sunglasses</h3><p class="text-gray-500 text-sm">UV Protection</p><div class="flex items-center justify-between mt-3"><span class="text-green-600 font-bold text-xl">₹799</span><button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button></div></div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs"><img src="https://picsum.photos/300?16" class="rounded-lg w-full h-40 sm:h-48 object-cover" /><h3 class="font-bold text-lg mt-3">Perfume</h3><p class="text-gray-500 text-sm">Long Lasting</p><div class="flex items-center justify-between mt-3"><span class="text-green-600 font-bold text-xl">₹1,199</span><button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button></div></div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs"><img src="https://picsum.photos/300?17" class="rounded-lg w-full h-40 sm:h-48 object-cover" /><h3 class="font-bold text-lg mt-3">Chair</h3><p class="text-gray-500 text-sm">Office Chair</p><div class="flex items-center justify-between mt-3"><span class="text-green-600 font-bold text-xl">₹5,499</span><button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button></div></div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs"><img src="https://picsum.photos/300?18" class="rounded-lg w-full h-40 sm:h-48 object-cover" /><h3 class="font-bold text-lg mt-3">Watch</h3><p class="text-gray-500 text-sm">Luxury Watch</p><div class="flex items-center justify-between mt-3"><span class="text-green-600 font-bold text-xl">₹3,999</span><button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button></div></div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs"><img src="https://picsum.photos/300?19" class="rounded-lg w-full h-40 sm:h-48 object-cover" /><h3 class="font-bold text-lg mt-3">Camera Lens</h3><p class="text-gray-500 text-sm">Zoom Lens</p><div class="flex items-center justify-between mt-3"><span class="text-green-600 font-bold text-xl">₹8,999</span><button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button></div></div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4 w-full max-w-xs"><img src="https://picsum.photos/300?20" class="rounded-lg w-full h-40 sm:h-48 object-cover" /><h3 class="font-bold text-lg mt-3">Airpods</h3><p class="text-gray-500 text-sm">Wireless Earbuds</p><div class="flex items-center justify-between mt-3"><span class="text-green-600 font-bold text-xl">₹4,999</span><button class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer">Buy</button></div></div>
+
+    </div>
+  </section>
+
+  <!-- Footer
+  <footer class="bg-gray-900 text-white mt-10 w-full">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div>
+        <h3 class="font-bold text-xl mb-3">About</h3>
+        <p class="text-gray-400">ShopKart is a modern ecommerce demo website built using Tailwind CSS.</p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-xl mb-3">Help</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li class="hover:text-white cursor-pointer">Payments</li>
+          <li class="hover:text-white cursor-pointer">Shipping</li>
+          <li class="hover:text-white cursor-pointer">Returns</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-xl mb-3">Policy</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li class="hover:text-white cursor-pointer">Privacy Policy</li>
+          <li class="hover:text-white cursor-pointer">Terms</li>
+          <li class="hover:text-white cursor-pointer">Security</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-xl mb-3">Social</h3>
+        <div class="flex gap-4 text-gray-400">
+          <div class="hover:text-white cursor-pointer">Facebook</div>
+          <div class="hover:text-white cursor-pointer">Instagram</div>
+          <div class="hover:text-white cursor-pointer">Twitter</div>
+          <div class="hover:text-white cursor-pointer">WhatsApp</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-700 text-center py-4 text-gray-400">
+      © 2026 ShopKart. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- print li tag by javascript/ renderring. line no 647. 
+  <ul id="ul1">
+
+  </ul>
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event in Js</title>
+
+</head>
+
+<body>
+
+  <ul id="ul1"></ul>
+
+  <!-- <button onclick="console.log('Hello')">Click me</button> -->
+  <button id="btn">Click me</button>
+
+  
+  <script src="index.js"></script>
+</body>
+
+</html>
