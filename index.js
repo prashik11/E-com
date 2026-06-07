@@ -772,3 +772,290 @@ const body = document.querySelector("body")
 // Start
 // End
 // Welcome
+
+// JavaScript is synchronous by default, but it can handle asynchronous operations using:
+// setTimeout()
+// setInterval()
+// Promises
+// async/await
+// Fetch API
+
+// Event loop
+// The Event Loop continuously checks whether the Call Stack is empty. 
+// If it is, it takes pending callbacks from the Callback Queue and pushes them to the Call Stack for execution.
+
+// Example
+// console.log("Start");
+
+// setTimeout(() => {
+//   console.log("Hello");
+// }, 2000);
+
+// console.log("End");
+
+// Output
+// Start
+// End
+// Hello
+
+// Callback Hell means:
+// multiple nested callbacks inside callbacks, making code hard to read and maintain.
+// Example
+// setTimeout(() => {
+//   console.log("Step 1");
+
+//   setTimeout(() => {
+//     console.log("Step 2");
+
+//     setTimeout(() => {
+//       console.log("Step 3");
+
+//       setTimeout(() => {
+//         console.log("Step 4");
+//       }, 1000);
+
+//     }, 1000);
+
+//   }, 1000);
+
+// }, 1000);
+// Output
+// Step 1
+// Step 2
+// Step 3
+// Step 4
+
+// Inversion of Control (IoC) in JavaScript
+// In simple words:
+// You give control of your function to someone else.
+
+// Example with Callback
+// function fetchData(callback) {
+//   // Assume data comes later
+//   callback();
+// }
+
+// fetchData(() => {
+//   console.log("Data received");
+// });
+
+// Here:
+
+// You wrote the callback function.
+// But fetchData() decides when to execute it.
+
+// So control is no longer fully in your hands.
+
+// Promise is:
+// an object that represents the future result of an asynchronous operation.
+
+// Without promises, we get callback hell:
+
+// getUser(() => {
+//   getOrders(() => {
+//     getPayment(() => {
+//       console.log("Done");
+//     });
+//   });
+// });
+
+// Promises make code cleaner.
+
+// Promise States
+
+// A promise can be in 3 states:
+
+// Pending   → Initial state
+// Fulfilled → Success
+// Rejected  → Failure
+
+// Creating a Promise
+// const promise = new Promise((resolve, reject) => {
+
+//   let success = true;
+
+//   if (success) {
+//     resolve("Data received");
+//   } else {
+//     reject("Something went wrong");
+//   }
+
+// });
+// Consuming a Promise
+// promise
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// Output
+// Data received
+// then()
+
+// Runs when promise is fulfilled.
+// promise.then((result) => {
+//   console.log(result);
+// });
+// catch()
+
+// Runs when promise is rejected.
+// promise.catch((error) => {
+//   console.log(error);
+// });
+
+// Promise Chaining
+// Promise.resolve(10)
+//   .then(num => num * 2)
+//   .then(num => num + 5)
+//   .then(result => console.log(result));
+// Output
+// 25
+
+// async and await in JavaScript
+// async and await are used to handle Promises in a cleaner way.
+// They make asynchronous code look like synchronous code.
+
+// Without async/await
+
+// function getData() {
+//   return Promise.resolve("Hello");
+// }
+
+// getData()
+//   .then(data => {
+//     console.log(data);
+//   });
+
+// With async/await
+// function getData() {
+//   return Promise.resolve("Hello");
+// }
+
+// async function showData() {
+//   const data = await getData();
+//   console.log(data);
+// }
+
+// showData();
+
+// Output
+// Hello
+// async
+
+// When you add async before a function:
+
+// async function test() {
+//   return "Hello";
+// }
+
+// JavaScript automatically returns a Promise.
+// test().then(data => console.log(data));
+
+// Output:
+// Hello
+
+// await
+// await pauses execution of the async function until the Promise is resolved.
+
+// const result = await promise;
+
+// Example with setTimeout
+// function getData() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve("Data Loaded");
+//     }, 2000);
+//   });
+// }
+
+// async function fetchData() {
+//   console.log("Loading...");
+
+//   const data = await getData();
+
+//   console.log(data);
+// }
+// fetchData();
+
+// Output
+// Loading...
+// (Data waits 2 seconds)
+// Data Loaded
+
+//promise methods
+// 1. Promise.resolve()
+// Creates a resolved promise.
+
+// const p = Promise.resolve("Success");
+// p.then(data => console.log(data));
+
+// Output
+// Success
+
+// 2. Promise.reject()
+// Creates a rejected promise.
+// const p = Promise.reject("Error");
+
+// p.catch(err => console.log(err));
+
+// Output
+// Error
+
+// 3. Promise.all()
+// Waits for all promises to succeed.
+
+// const p1 = Promise.resolve("A");
+// const p2 = Promise.resolve("B");
+// const p3 = Promise.resolve("C");
+
+// Promise.all([p1, p2, p3])
+//   .then(data => console.log(data));
+
+//   Output
+// ["A", "B", "C"]
+
+// ❌ If even one promise fails, Promise.all() fails.
+
+// 4. Promise.allSettled()
+// Waits for all promises, whether they succeed or fail.
+
+// Promise.allSettled([
+//   Promise.resolve("A"),
+//   Promise.reject("Error")
+// ])
+// .then(result => console.log(result));
+
+// Output
+// [
+//   { status: "fulfilled", value: "A" },
+//   { status: "rejected", reason: "Error" }
+// ]
+
+// 5. Promise.race()
+// Returns the result of the first promise to settle.
+
+// const p1 = new Promise(r => setTimeout(() => r("A"), 2000));
+// const p2 = new Promise(r => setTimeout(() => r("B"), 1000));
+
+// Promise.race([p1, p2])
+//   .then(data => console.log(data));
+
+//   Output
+// B
+// Because p2 finishes first.
+
+// 6. Promise.any()
+// Returns the first fulfilled promise.
+
+// Promise.any([
+//   Promise.reject("Error"),
+//   Promise.resolve("Success")
+// ])
+// .then(data => console.log(data));
+
+// Output
+// Success
+
+// Only fails if all promises fail.
