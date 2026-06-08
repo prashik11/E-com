@@ -1059,3 +1059,106 @@ const body = document.querySelector("body")
 // Success
 
 // Only fails if all promises fail.
+
+// Error handling means:
+// managing errors gracefully so the program doesn't crash unexpectedly.
+
+// Without Error Handling
+
+// console.log(a);
+// Output
+// ReferenceError: a is not defined
+
+// Program stops at that point.
+
+// Using 
+// try...catch
+
+// try {
+//   console.log(a);
+// } catch (error) {
+//   console.log("Error occurred");
+// }
+// Output
+// Error occurred
+
+// The program continues running.
+
+// Syntax
+// try {
+//   // risky code
+// } catch (error) {
+//   // handle error
+// }
+
+// finally always executes.
+
+// try {
+//   console.log("Try block");
+// } catch (error) {
+//   console.log("Catch block");
+// } finally {
+//   console.log("Finally block");
+// }
+
+// Output
+// Try block
+// Finally block
+
+
+// Throw Custom Error
+// let age = 15;
+
+// try {
+//   if (age < 18) {
+//     throw new Error("Age must be 18 or above");
+//   }
+// } catch (error) {
+//   console.log(error.message);
+// }
+
+// Output
+// Age must be 18 or above
+
+// Error Object Properties
+// try {
+//   console.log(a);
+// } catch (error) {
+//   console.log(error.name);
+//   console.log(error.message);
+// }
+// Output
+// ReferenceError
+// a is not defined
+
+// Common Error Types
+// Error Type	Example
+// ReferenceError	Variable not declared
+// TypeError	Calling method on wrong type
+// SyntaxError	Invalid syntax
+// RangeError	Value out of range
+
+// Example: TypeError
+// let num = null;
+
+// try {
+//   num.toUpperCase();
+// } catch (error) {
+//   console.log(error.name);
+// }
+// Output
+// TypeError
+
+// Error Handling with Async/Await
+// async function getData() {
+//   try {
+//     const result = await Promise.reject("API Error");
+//     console.log(result);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+// getData();
+
+// Output
+// API Error
