@@ -1162,3 +1162,52 @@ const body = document.querySelector("body")
 
 // Output
 // API Error
+
+// fetch() is used to:
+
+// make HTTP requests to a server or API and get data.
+
+// It returns a Promise.
+
+// Syntax
+// fetch(url)
+// Example
+// fetch("https://jsonplaceholder.typicode.com/users")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(data);
+//   });
+
+//   Using Async/Await
+// async function getUsers() {
+//   const response = await fetch(
+//     "https://jsonplaceholder.typicode.com/users"
+//   );
+
+//   const data = await response.json();
+
+//   console.log(data);
+// }
+// getUsers();
+
+// Why response.json()?
+// The server sends data as JSON text.
+
+// const data = await response.json();
+
+// converts it into a JavaScript object/array.
+
+// Error Handling
+// async function getUsers() {
+//   try {
+//     const response = await fetch(
+//       "https://jsonplaceholder.typicode.com/users"
+//     );
+
+//     const data = await response.json();
+
+//     console.log(data);
+//   } catch (error) {
+//     console.log("Error:", error);
+//   }
+// }
