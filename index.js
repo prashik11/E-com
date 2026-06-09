@@ -696,7 +696,7 @@ document.querySelector("ul").append(li) */
 //an object automatically created when an event happens
 
 // const btn = document.getElementById("btn")
-const body = document.querySelector("body")
+// const body = document.querySelector("body")
 // btn.addEventListener('click', (e) => {
     // e.target.innerText = "Hello"
     // console.log(e.target)
@@ -712,14 +712,14 @@ const body = document.querySelector("body")
 // })
 
 //text
-    const submit = document.getElementById("submit");
-    const colorName = document.getElementById("colorName")
+    // const submit = document.getElementById("submit");
+    // const colorName = document.getElementById("colorName")
 
-    submit.addEventListener("click", (e) => {
-        e.preventDefault();
-        body.style.backgroundColor = '${colorName.value}'
-        console.log(colorName.value)
-    })
+    // submit.addEventListener("click", (e) => {
+    //     e.preventDefault();
+    //     body.style.backgroundColor = '${colorName.value}'
+    //     console.log(colorName.value)
+    // })
 
 // setInterval() is used to:
 // run a function repeatedly after a fixed time interval.
