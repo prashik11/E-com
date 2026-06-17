@@ -1211,3 +1211,59 @@ document.querySelector("ul").append(li) */
 //     console.log("Error:", error);
 //   }
 // }
+
+// Local Storage vs Session Storage
+// Both are used to store data in the browser.
+
+// Local Storage
+// Data remains even after:
+// Browser closed
+// Tab closed
+// Computer restarted
+
+// localStorage.setItem("name", "Prashik");
+// const data = localStorage.getItem("name");
+// console.log(data);
+
+// Output:
+// Prashik
+
+// Remove data:
+// localStorage.removeItem("name");
+
+// Clear all data:
+// localStorage.clear();
+
+// Session Storage
+// Data remains only while the tab is open.
+// If you close the tab:
+// Data is deleted automatically
+
+// Example:
+// sessionStorage.setItem("name", "Prashik");
+// const data = sessionStorage.getItem("name");
+// console.log(data);
+
+// Store Object
+// Convert object to JSON:
+
+// const user = {
+//   name: "Prashik",
+//   age: 22
+// };
+
+// localStorage.setItem("user", JSON.stringify(user));
+
+// Get object back:
+
+// const data = JSON.parse(
+//   localStorage.getItem("user")
+// );
+
+// console.log(data.name);
+
+// Output:
+// Prashik
+
+// Interview Definition
+// Local Storage stores data permanently until manually removed, while Session Storage stores data only for the current browser tab session.
