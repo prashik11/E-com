@@ -1267,3 +1267,294 @@ document.querySelector("ul").append(li) */
 
 // Interview Definition
 // Local Storage stores data permanently until manually removed, while Session Storage stores data only for the current browser tab session.
+
+// A Class is a blueprint (template) for creating objects.
+// It helps us create multiple objects with the same properties and methods.
+
+// Example
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   greet() {
+//     console.log(`Hello, my name is ${this.name}`);
+//   }
+// }
+
+// const person1 = new Person("Prashik", 23);
+// const person2 = new Person("Rahul", 25);
+
+// person1.greet();
+// person2.greet();
+// Output
+// Hello, my name is Prashik
+// Hello, my name is Rahul
+
+// constructor()
+// A special method that runs automatically when an object is created using new.
+// It initializes object properties.
+
+// Example:
+
+// constructor(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
+
+// this Keyword
+// this refers to the current object.
+
+// this.name = name;
+
+// Means:
+// Object's  = value passed to constructorname
+
+// Object
+// An object is an instance of a class. It contains actual values.
+
+// Creating Objects
+// const person1 = new Person("Prashik", 23);
+// const person2 = new Person("Rahul", 25);
+
+// Here:
+// person1 and person2 are objects.
+// They have their own values but share the same methods.
+
+// Accessing Object Properties and Methods
+// console.log(person1.name);
+// person1.greet();
+// Output
+// Prashik
+// Hello, my name is Prashik
+
+// Example
+// class Car {
+//   constructor(brand, color) {
+//     this.brand = brand;
+//     this.color = color;
+//   }
+
+//   start() {
+//     console.log(`${this.brand} car started`);
+//   }
+// }
+
+// const car1 = new Car("BMW", "Black");
+// const car2 = new Car("Tesla", "White");
+
+// car1.start();
+// car2.start();
+
+// Output
+// BMW car started
+// Tesla car started
+
+// A prototype is an object from which other objects can inherit properties and methods.
+// Without prototype:
+
+// function Person(name) {
+//   this.name = name;
+
+//   this.greet = function() {
+//     console.log("Hello " + this.name);
+//   };
+// }
+
+// const p1 = new Person("Prashik");
+// const p2 = new Person("Rahul");
+
+// Here, every object gets its own separate greet() function, which wastes memory.
+// Using Prototype
+// function Person(name) {
+//   this.name = name;
+// }
+
+// Person.prototype.greet = function() {
+//   console.log("Hello " + this.name);
+// };
+
+// const p1 = new Person("Prashik");
+// const p2 = new Person("Rahul");
+
+// p1.greet();
+// p2.greet();
+
+// Output
+// Hello Prashik
+// Hello Rahul
+
+// Now, greet() is stored once in Person.prototype and shared by all objects.
+
+// Class and Prototype
+// JavaScript classes internally use prototypes.
+
+// class Person {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   greet() {
+//     console.log("Hello " + this.name);
+//   }
+// }
+
+// const p1 = new Person("Prashik");
+
+// p1.greet();
+
+// Behind the scenes:
+// Person.prototype.greet()
+
+// is created and shared by all objects.
+
+// call(), apply(), and bind() in JavaScript
+// These methods are used to control the value of this inside a function.
+
+// 1. call()
+// call() invokes a function immediately and allows you to pass arguments one by one.
+
+// Syntax
+// functionName.call(thisValue, arg1, arg2, ...)
+// Example
+// const person = {
+//   name: "Prashik",
+// };
+
+// function greet(city, country) {
+//   console.log(`Hello, I am ${this.name} from ${city}, ${country}`);
+// }
+
+// greet.call(person, "Pune", "India");
+
+// Output
+// Hello, I am Prashik from Pune, India
+
+// 2. apply()
+// apply() also invokes a function immediately, but arguments are passed as an array.
+
+// Syntax
+// functionName.apply(thisValue, [arg1, arg2])
+// Example
+// const person = {
+//   name: "Prashik",
+// };
+
+// function greet(city, country) {
+//   console.log(`Hello, I am ${this.name} from ${city}, ${country}`);
+// }
+
+// greet.apply(person, ["Pune", "India"]);
+
+// Output
+// Hello, I am Prashik from Pune, India
+
+// 3. bind()
+// bind() does not execute the function immediately.
+// It returns a new function with this permanently bound.
+
+// Syntax
+// const newFunction = functionName.bind(thisValue, arg1, arg2);
+// Example
+// const person = {
+//   name: "Prashik",
+// };
+
+// function greet(city, country) {
+//   console.log(`Hello, I am ${this.name} from ${city}, ${country}`);
+// }
+
+// const greetUser = greet.bind(person, "Pune", "India");
+
+// greetUser();
+
+// Output
+// Hello, I am Prashik from Pune, India
+
+// Inheritance is a feature that allows one class or object to use the properties and methods of another class or object.
+// In simple words:
+// A child class can inherit the features of a parent class.
+
+// Example using class
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   eat() {
+//     console.log(`${this.name} is eating`);
+//   }
+// }
+
+// class Dog extends Animal {
+//   bark() {
+//     console.log(`${this.name} is barking`);
+//   }
+// }
+
+// const dog1 = new Dog("Tommy");
+
+// dog1.eat();
+// dog1.bark();
+
+// Output
+// Tommy is eating
+// Tommy is barking
+
+// extends Keyword
+// extends is used to create a child class from a parent class.
+
+// class Dog extends Animal {}
+
+// Here:
+// Animal → Parent class (Super class)
+// Dog → Child class (Sub class)
+
+// super() Keyword
+// super() calls the constructor of the parent class.
+
+// Example:
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// class Dog extends Animal {
+//   constructor(name, breed) {
+//     super(name); // Calls Animal constructor
+//     this.breed = breed;
+//   }
+// }
+
+// const dog = new Dog("Tommy", "Labrador");
+
+// console.log(dog.name);
+// console.log(dog.breed);
+
+// Output
+// Tommy
+// Labrador
+
+// Method Overriding
+// A child class can provide its own version of a parent method.
+
+// class Animal {
+//   sound() {
+//     console.log("Animal makes sound");
+//   }
+// }
+
+// class Dog extends Animal {
+//   sound() {
+//     console.log("Dog barks");
+//   }
+// }
+
+// const dog = new Dog();
+
+// dog.sound();
+// Output
+// Dog barks
+
+// The child method overrides the parent method.
