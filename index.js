@@ -1558,3 +1558,445 @@ document.querySelector("ul").append(li) */
 // Dog barks
 
 // The child method overrides the parent method.
+
+// Imperative means:
+// You tell the computer how to do something step by step.
+// You manually control the DOM and write every instruction.
+
+// Example (Vanilla JavaScript)
+// const button = document.getElementById("btn");
+
+// button.addEventListener("click", () => {
+//   const heading = document.getElementById("title");
+//   heading.innerText = "Hello React";
+//   heading.style.color = "blue";
+// });
+
+// Here you are saying:
+
+// Find the element
+//        ↓
+// Change the text
+//        ↓
+// Change the style
+
+// You control every step.
+
+// 2. Declarative Approach
+// Declarative means:
+// You tell the computer what the final UI should look like, and React handles how to update the DOM.
+
+// Example (React)
+// function App() {
+//   const [text, setText] = React.useState("Hello JavaScript");
+
+//   return (
+//     <>
+//       <h1>{text}</h1>
+
+//       <button onClick={() => setText("Hello React")}>
+//         Change Text
+//       </button>
+//     </>
+//   );
+// }
+
+// Here you simply describe:
+
+// If state = "Hello JavaScript"
+//       ↓
+// Show Hello JavaScript
+
+// If state = "Hello React"
+//       ↓
+// Update UI automatically
+
+// React decides how to update the DOM using the Virtual DOM.
+
+// Components in React
+// A component is a reusable piece of UI in React.
+
+// Instead of writing the same HTML multiple times, you create a component once and reuse it.
+
+// Example
+// function App() {
+//   return (
+//     <h1>Hello React</h1>
+//   );
+// }
+
+// export default App;
+// Here, App is a component.
+
+// Creating a Component
+// Create a file named Header.jsx
+
+// function Header() {
+//   return <h1>Welcome to React</h1>;
+// }
+
+// export default Header;
+// Now use it inside App.jsx.
+
+// import Header from "./Header";
+
+// function App() {
+//   return (
+//     <div>
+//       <Header />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// Output
+// Welcome to React
+
+// Why Components?
+// Without components:
+
+// <h1>Header</h1>
+// <p>Content</p>
+
+// <h1>Header</h1>
+// <p>Content</p>
+
+// <h1>Header</h1>
+// <p>Content</p>
+
+// Lots of repeated code.
+
+// With components:
+
+// <Header />
+// <Header />
+// <Header />
+
+// Write once, use many times.
+
+// Types of Components
+// 1. Functional Component ✅ (Most Common)
+// function Welcome() {
+//   return <h2>Hello</h2>;
+// }
+
+// or
+
+// const Welcome = () => {
+//   return <h2>Hello</h2>;
+// };
+
+// 2. Class Component (Older)
+// import React, { Component } from "react";
+
+// class Welcome extends Component {
+//   render() {
+//     return <h2>Hello</h2>;
+//   }
+// }
+
+// export default Welcome;
+
+// Today, React mainly uses functional components with Hooks.
+
+// Component Naming Rules
+
+// ✅ Correct
+
+// function Header() {}
+// function UserProfile() {}
+
+// ❌ Wrong
+
+// function header() {}
+
+// Component names must start with a capital letter.
+
+// Components Can Contain Other Components
+// function Header() {
+//   return <h1>Header</h1>;
+// }
+
+// function Footer() {
+//   return <h3>Footer</h3>;
+// }
+
+// function App() {
+//   return (
+//     <>
+//       <Header />
+//       <Footer />
+//     </>
+//   );
+// }
+
+// Babel in React
+// Babel is a JavaScript compiler.
+// It converts modern JavaScript (ES6+) and JSX into JavaScript that browsers can understand.
+
+// Why Do We Need Babel?
+// Browsers do not understand JSX.
+
+// For example:
+
+// const element = <h1>Hello React</h1>;
+
+// The browser cannot run this directly.
+// Babel converts it into:
+
+// const element = React.createElement(
+//   "h1",
+//   null,
+//   "Hello React"
+// );
+
+// Now the browser can understand it.
+
+// Components and Props in React
+// What is a Component?
+
+// A component is a reusable piece of UI.
+
+// Example:
+// function Header() {
+//   return <h1>Welcome to React</h1>;
+// }
+
+// export default Header;
+
+// Use it in another component:
+
+// import Header from "./Header";
+
+// function App() {
+//   return (
+//     <>
+//       <Header />
+//     </>
+//   );
+// }
+
+// What are Props?
+// Props (short for Properties) are used to pass data from a parent component to a child component.
+
+// Think of props as function arguments.
+
+// Without Props
+// function User() {
+//   return <h2>Prashik</h2>;
+// }
+
+// function App() {
+//   return (
+//     <>
+//       <User />
+//       <User />
+//       <User />
+//     </>
+//   );
+// }
+
+// Output
+// Prashik
+// Prashik
+// Prashik
+
+// Every component displays the same data.
+
+// With Props
+// User.jsx
+
+// function User(props) {
+//   return <h2>{props.name}</h2>;
+// }
+
+// export default User;
+// App.jsx
+// import User from "./User";
+
+// function App() {
+//   return (
+//     <>
+//       <User name="Prashik" />
+//       <User name="Rahul" />
+//       <User name="Amit" />
+//     </>
+//   );
+// }
+
+// export default App;
+
+// Output
+// Prashik
+// Rahul
+// Amit
+
+// The same component displays different data because of props.
+
+// Passing Multiple Props
+// function User(props) {
+//   return (
+//     <>
+//       <h2>Name: {props.name}</h2>
+//       <p>Age: {props.age}</p>
+//       <p>City: {props.city}</p>
+//     </>
+//   );
+// }
+
+// Use it:
+
+// <User
+//   name="Prashik"
+//   age={23}
+//   city="Pune"
+// />
+
+// Output
+// Name: Prashik
+// Age: 23
+// City: Pune
+
+// Props Destructuring
+// Instead of writing:
+
+// function User(props) {
+//   return <h2>{props.name}</h2>;
+// }
+
+// Use destructuring:
+
+// function User({ name, age }) {
+//   return (
+//     <>
+//       <h2>{name}</h2>
+//       <p>{age}</p>
+//     </>
+//   );
+// }
+
+// This is the preferred approach.
+
+// Passing Arrays
+// function App() {
+//   const skills = ["HTML", "CSS", "JavaScript"];
+
+//   return <User skills={skills} />;
+// }
+// function User({ skills }) {
+//   return (
+//     <ul>
+//       {skills.map((skill) => (
+//         <li key={skill}>{skill}</li>
+//       ))}
+//     </ul>
+//   );
+// }
+
+// Passing Objects
+// const user = {
+//   name: "Prashik",
+//   age: 23,
+// };
+
+// <User user={user} />
+// function User({ user }) {
+//   return (
+//     <>
+//       <h2>{user.name}</h2>
+//       <p>{user.age}</p>
+//     </>
+//   );
+// }
+
+// Passing Functions
+
+// Parent:
+
+// function App() {
+//   function greet() {
+//     alert("Hello!");
+//   }
+
+//   return <Button onClick={greet} />;
+// }
+
+// Child:
+
+// function Button({ onClick }) {
+//   return <button onClick={onClick}>Click Me</button>;
+// }
+
+// Props are Read-Only
+
+// ❌ Wrong
+
+// function User(props) {
+//   props.name = "Rahul";
+// }
+
+// Hooks in React
+
+// Hooks are special functions in React that let you use features like state, lifecycle, and context inside functional components.
+
+// Common React Hooks
+// Hook	Purpose
+// useState()	Manage state
+// useEffect()	Handle side effects
+// useContext()	Access context
+// useRef()	Access DOM or persist values
+// useMemo()	Optimize expensive calculations
+// useCallback()	Memoize functions
+// useReducer()	Manage complex state
+
+// 1. useState()
+
+// Used to store and update data.
+
+// import { useState } from "react";
+
+// function Counter() {
+//   const [count, setCount] = useState(0);
+
+//   return (
+//     <>
+//       <h2>{count}</h2>
+
+//       <button onClick={() => setCount(count + 1)}>
+//         Increment
+//       </button>
+//     </>
+//   );
+// }
+
+// export default Counter;
+// Output
+// 0
+// [Increment]
+
+// After clicking:
+
+// 1
+// 2
+// 3
+// ...
+// 2. useEffect()
+
+// Runs code after the component renders.
+
+// import { useEffect } from "react";
+
+// function App() {
+//   useEffect(() => {
+//     console.log("Component Rendered");
+//   });
+
+//   return <h1>Hello</h1>;
+// }
+
+// Common uses:
+
+// Fetch API data
+// Timers
+// Event listeners
