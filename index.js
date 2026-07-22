@@ -243,7 +243,7 @@
 //     Age: 22,
 //     class: 'B'
 // }
-// let{id,name,...num}=students  ----------object destructuring
+// let{id,name,...num}=students  //----------object destructuring
 // console.log(students)
 
 
@@ -253,7 +253,7 @@
 //     console.log(id)
 //     console.log(name)
 //     console.log(hello)
-// let studentarr = name.split(",");   -------------------- split, names in array
+// let studentarr = name.split(",");   //-------------------- split, names in array
 // console.log(studentarr);
 //  }
 // obj(students)
@@ -2000,3 +2000,4 @@ document.querySelector("ul").append(li) */
 // Fetch API data
 // Timers
 // Event listeners
+
